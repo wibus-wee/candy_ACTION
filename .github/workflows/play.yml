@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install BT
-        run: sudo bash install.sh
+        run: wget -O install.sh https://raw.githubusercontent.com/wibus-wee/candy_ACTION/main/play.sh && sudo bash install.sh
