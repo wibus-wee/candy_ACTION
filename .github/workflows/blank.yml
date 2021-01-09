@@ -4,13 +4,12 @@ on: [push]
 
 jobs:
     build:
-        runs-on: macOS-latest
+        runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
         - name: install node+yarn
           run: |
-            curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
-            brew install yarn
+            actions/setup-node@v1
         - name: Test ok
           run: |
             node -v
