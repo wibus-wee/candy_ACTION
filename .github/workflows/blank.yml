@@ -35,6 +35,7 @@ jobs:
             sudo npm install yarn -g
             sudo npm install nodejs -g
             sudo npm install rimraf -g
+            sudo npm install -g cross-env
         - name: Server Install
           run: |
             cd server
