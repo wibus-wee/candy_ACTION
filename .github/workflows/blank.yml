@@ -73,7 +73,7 @@ jobs:
         - name: kami clone
           run: git clone https://github.com/mx-space/admin
         - name: admin Install
-           run: |
+          run: |
             cd admin
             yarn
         - name: admin Build
