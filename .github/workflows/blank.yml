@@ -21,93 +21,93 @@ jobs:
             name: Out
             path: ./out
     build-server:
-        name: Build server
+        name: Build Mix-Space(server)
         runs-on: ubuntu-latest
         steps:
         - name: checkout
           uses: actions/checkout@v2
         - name: Setup Node.js environment
           uses: actions/setup-node@v2.1.4
-        - name: Server clone
-          run: git clone https://github.com/mx-space/server
-        - name: Server Install
+        - name: Install rimraf
           run: |
+            sudo npm install rimraf -g
+        - name: Clone and Install
+          run: |
+            git clone https://github.com/mx-space/server
             cd server
-            cp .env.example .env
-            yarn
-        - name: Server Build
-          run: yarn build
-        - name: Upload Candy Build Artifact
+            sudo yarn
+        - name: fix user files
+          run: |
+            rm -rf .env
+            wget http://api.iucky.cn/themes/.env_server
+            mv .env_server .env
+            echo "fix user files success"
+        - name: yarn build
+          run: sudo yarn build
+        - name: Upload server Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
             name: server
             path: ./server
     build-kami:
-        name: Build kami
+        name: Build Mix-Space(kami)
         runs-on: ubuntu-latest
         steps:
         - name: checkout
           uses: actions/checkout@v2
         - name: Setup Node.js environment
           uses: actions/setup-node@v2.1.4
-        - name: kami clone
-          run: git clone https://github.com/mx-space/kami
         - name: Install rimraf
-          run: sudo npm install rimraf -g
-        - name: kami Install
           run: |
+            sudo npm install rimraf -g
+        - name: Clone and Install
+          run: |
+            git clone https://github.com/mx-space/kami
             cd kami
-            yarn
-        - name: kami Build
-          run: yarn build
+            sudo yarn
+        - name: fix user files
+          run: |
+            rm -rf .env
+            rm -rf config.ts
+            wget http://api.iucky.cn/themes/kami/.env
+            wget http://api.iucky.cn/themes/kami/configs.ts
+            cd public
+            rm -rf manifest.json
+            wget http://api.iucky.cn/themes/kami/public/manifest.json
+            cd ..
+            echo "fix user files success"
+        - name: yarn build
+          run: sudo yarn build
         - name: Upload kami Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
             name: kami
             path: ./kami
     build-admin:
-        name: Build admin
+        name: Build Mix-Space(admin)
         runs-on: ubuntu-latest
         steps:
         - name: checkout
           uses: actions/checkout@v2
         - name: Setup Node.js environment
           uses: actions/setup-node@v2.1.4
-        - name: kami clone
-          run: git clone https://github.com/mx-space/admin
-        - name: admin Install
-          run: |
-            cd admin
-            yarn
-            cp .env.example .env
         - name: Install rimraf
           run: |
-            sudo npm install yarn -g
-            sudo npm install nodejs -g
             sudo npm install rimraf -g
-            sudo npm install -g cross-env
-        - name: admin Build
-          run: yarn build
-        - name: Upload admin Build Artifact
-          uses: actions/upload-artifact@v2.2.2
-          with:
-            name: admin
-            path: ./admin/dist
-    build-test:
-        name: test
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v2
-        - name: Node.js
-          uses: actions/setup-node@v2.1.4
-        - name: admin start
+        - name: Clone and Install
           run: |
-            sudo npm install rimraf -g
             git clone https://github.com/mx-space/admin
             cd admin
             sudo yarn
-            sudo yarn build
+        - name: fix user files
+          run: |
+            rm -rf .env
+            rm -rf vue.config.js
+            wget http://api.iucky.cn/themes/admin/.env
+            wget http://api.iucky.cn/themes/admin/vue.config.js
+            echo "fix user files success"
+        - name: yarn build
+          run: sudo yarn build
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
