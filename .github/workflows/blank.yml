@@ -26,6 +26,8 @@ jobs:
         - name: tar file
           run: |
             tar cf Out.tar.gz out
+            sudo rm -rf .next
+            sudo rm -rf out
         - name: Git Commit and Push
           uses: github-actions-x/commit@v2.6
           with:
