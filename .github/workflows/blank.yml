@@ -93,4 +93,23 @@ jobs:
           with:
             name: admin
             path: ./admin/dist
-        
+    build-test:
+        name: test
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name: Node.js
+          uses: actions/setup-node@v2.1.4
+        - name: admin start
+          run: |
+            sudo npm install rimraf -g
+            git clone https://github.com/mx-space/admin
+            cd admin
+            sudo yarn
+            sudo yarn build
+        - name: Upload admin Build Artifact
+          uses: actions/upload-artifact@v2.2.2
+          with:
+            name: admin
+            path: ./admin/dist
