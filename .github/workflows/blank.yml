@@ -31,7 +31,9 @@ jobs:
         - name: Server clone
           run: git clone https://github.com/mx-space/server
         - name: Server Install
-          run: yarn
+          run: |
+            cd server
+            yarn
         - name: Server Build
           run: yarn build
         - name: Upload Candy Build Artifact
@@ -50,7 +52,9 @@ jobs:
         - name: kami clone
           run: git clone https://github.com/mx-space/kami
         - name: kami Install
-          run: yarn
+          run: |
+            cd kami
+            yarn
         - name: kami Build
           run: yarn build
         - name: Upload kami Build Artifact
@@ -69,7 +73,9 @@ jobs:
         - name: kami clone
           run: git clone https://github.com/mx-space/admin
         - name: admin Install
-          run: yarn
+           run: |
+            cd admin
+            yarn
         - name: admin Build
           run: yarn build
         - name: Upload admin Build Artifact
