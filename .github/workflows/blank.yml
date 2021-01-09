@@ -32,10 +32,9 @@ jobs:
           run: git clone https://github.com/mx-space/server
         - name: Install rimraf
           run: |
-            yarn global add pm2 -g
-            yarn global add ts-node -g
+            sudo npm install yarn -g
+            sudo npm install nodejs -g
             sudo npm install rimraf -g
-            wget https://api.iucky.cn/themes/mx-space-1.sh && sh mx-space-1.sh
         - name: Server Install
           run: |
             cd server
