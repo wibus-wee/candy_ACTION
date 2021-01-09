@@ -29,6 +29,17 @@ jobs:
             sudo rm -rf .next
             sudo rm -rf out
             sudo rm -rf node_modules
+        - name: Create a Release
+          uses: actions/create-release@v1.1.4
+          with:
+            tag_name: Release By Bot
+            release_name: Out
+            body: Candy performance
+            owner: wibus-wee
+            repo: Mix-Space-ACTION
+        - name: delete tar file
+          run: |
+            sudo rm -rf Out.tar.gz
         - name: Git Commit and Push
           uses: github-actions-x/commit@v2.6
           with:
