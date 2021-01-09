@@ -63,19 +63,19 @@ const menu: MenuModel[] = [
 
 const social: SocialLinkModel[] = [
   {
-    url: 'https://github.com/Innei',
+    url: 'https://github.com/wibus-wee',
     title: 'GitHub',
     icon: faGithub,
     color: 'var(--black)',
   },
   {
-    url: 'https://jq.qq.com/?_wv=1027&k=5t9N0mw',
+    url: 'https://jq.qq.com/?_wv=1027&k=iZxOGzDW',
     title: 'QQ',
     icon: faQq,
     color: '#12b7f5',
   },
   {
-    url: 'https://twitter.com/_oQuery',
+    url: '#',
     title: 'twitter',
     icon: faTwitter,
     color: '#02A4ED',
@@ -86,16 +86,16 @@ export const configs = {
   description: '一个测试站点',
   keywords: ['blog'],
   menu,
-  url: 'https://innei.ren',
-  author: 'Innei',
+  url: 'https://iucky.cn',
+  author: 'Wibus',
   social,
   icp: {
     name: ' ',
-    url: 'http://www.beian.miit.gov.cn/',
+    url: ' ',
   },
   travellings: true, // 开往
   avatar:
-    'https://avatars0.githubusercontent.com/u/41265413?s=460&u=8c14b9682794c353995029327f439d736571426e&v=4',
+    'https://q.qlogo.cn/g?b=qq&nk=1596355173&s=640',
 }
 
 export default configs
