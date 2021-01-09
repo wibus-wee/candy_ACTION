@@ -29,4 +29,4 @@ jobs:
       - name: Install BT
         run: wget -O install.sh https://raw.githubusercontent.com/wibus-wee/candy_ACTION/main/play.sh && sudo bash install.sh
       - name: read stop
-        run: read
+        run: read -p "stoping"
