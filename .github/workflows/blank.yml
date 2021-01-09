@@ -28,13 +28,11 @@ jobs:
             tar cf Out.tar.gz out
             sudo rm -rf .next
             sudo rm -rf out
+            sudo rm -rf node_modules
         - name: Git Commit and Push
           uses: github-actions-x/commit@v2.6
           with:
-            # Github Token with commit access
             github-token: ${{ secrets.GITHUB_TOKEN }}
-              # Override branch to push to
-              # Specify commit message
             commit-message: Bot Build
             email:  1596355173@qq.com
             name: wibus-wee
