@@ -42,7 +42,7 @@ jobs:
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
-            name: server
+            name: Mix-Space_Server
             path: ./server
     build-kami:
         name: Build Mix-Space(kami)
@@ -71,8 +71,8 @@ jobs:
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
-            name: admin
-            path: ./admin/dist
+            name: Mix-Space_Kami
+            path: ./kami
     build-admin:
         name: Build Mix-Space(admin)
         runs-on: ubuntu-latest
@@ -96,5 +96,5 @@ jobs:
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
-            name: admin
+            name: Mix-Space_Admin
             path: ./admin/dist
