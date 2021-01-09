@@ -9,9 +9,11 @@ jobs:
         - uses: actions/checkout@v2
         - name: Setup Node.js environment
           uses: actions/setup-node@v2.1.4
-        - name: Test ok
-          run: |
-            node -v
-            npm -v
-            yarn -v
-
+        - name: Yarn Install
+          run: yarn
+        - name: yarn build
+          run: yarn build
+        - name: action-push
+          # You may pin to the exact commit or the version.
+          # uses: ludeeus/action-push@0b7c1175655379c008f42bbaf524caa79cf89ec1
+          uses: ludeeus/action-push@0.0.1
