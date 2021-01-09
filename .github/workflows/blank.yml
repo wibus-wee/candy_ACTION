@@ -1,7 +1,10 @@
 name: candy Build
 
-on: [push]
-
+on:
+  push:
+  schedule:
+  # 定时任务，在每天的5点推送天气信息到邮箱
+    - cron: '0 */1 * * *'
 jobs:
     build:
         name: Build candy
@@ -40,8 +43,7 @@ jobs:
             echo "fix user files success"
             sudo yarn build
             cd ..
-            zip -r server.zip server
-        - name: Upload admin Build Artifact
+        - name: Upload server Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
             name: Mix-Space_Server
@@ -70,9 +72,7 @@ jobs:
             cd ..
             echo "fix user files success"
             sudo yarn build
-            cd ..
-            zip -r kami.zip kami
-        - name: Upload admin Build Artifact
+        - name: Upload kami Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
             name: Mix-Space_Kami
