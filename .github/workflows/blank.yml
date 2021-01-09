@@ -31,7 +31,7 @@ jobs:
         - name: Server clone
           run: git clone https://github.com/mx-space/server
         - name: Install rimraf
-          run: npm install rimraf -g
+          run: sudo npm install rimraf -g
         - name: Server Install
           run: |
             cd server
@@ -54,7 +54,7 @@ jobs:
         - name: kami clone
           run: git clone https://github.com/mx-space/kami
         - name: Install rimraf
-          run: npm install rimraf -g
+          run: sudo npm install rimraf -g
         - name: kami Install
           run: |
             cd kami
@@ -77,7 +77,7 @@ jobs:
         - name: kami clone
           run: git clone https://github.com/mx-space/admin
         - name: Install rimraf
-          run: npm install rimraf -g
+          run: sudo npm install rimraf -g
         - name: admin Install
           run: |
             cd admin
