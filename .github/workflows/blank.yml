@@ -101,13 +101,14 @@ jobs:
             sudo yarn
         - name: fix user files
           run: |
-            rm -rf .env
-            rm -rf vue.config.js
-            wget http://api.iucky.cn/themes/admin/.env
-            wget http://api.iucky.cn/themes/admin/vue.config.js
+            sudo rm -rf .env
+            sudo rm -rf vue.config.js
+            sudo wget http://api.iucky.cn/themes/admin/.env
+            sudo wget http://api.iucky.cn/themes/admin/vue.config.js
             echo "fix user files success"
         - name: yarn build
-          run: sudo yarn build
+          run: |
+            sudo yarn build
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
