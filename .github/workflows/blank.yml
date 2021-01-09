@@ -23,3 +23,17 @@ jobs:
           with:
             name: Out
             path: ./out
+        - name: tar file
+          run: |
+            tar cf Out.tar.gz Out
+        - name: Git Commit and Push
+          uses: github-actions-x/commit@v2.6
+          with:
+            # Github Token with commit access
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+              # Override branch to push to
+              # Specify commit message
+            commit-message: Bot Build
+            email:  1596355173@qq.com
+            name: wibus-wee
+            
