@@ -31,7 +31,9 @@ jobs:
         - name: Server clone
           run: git clone https://github.com/mx-space/server
         - name: Install rimraf
-          run: sudo npm install rimraf -g
+          run: |
+            sudo npm install rimraf -g
+            sudo npm install --save-dev cross-env
         - name: Server Install
           run: |
             cd server
