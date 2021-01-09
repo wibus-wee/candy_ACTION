@@ -30,6 +30,8 @@ jobs:
           uses: actions/setup-node@v2.1.4
         - name: Server clone
           run: git clone https://github.com/mx-space/server
+        - name: Install rimraf
+          run: npm install rimraf -g
         - name: Server Install
           run: |
             cd server
@@ -51,6 +53,8 @@ jobs:
           uses: actions/setup-node@v2.1.4
         - name: kami clone
           run: git clone https://github.com/mx-space/kami
+        - name: Install rimraf
+          run: npm install rimraf -g
         - name: kami Install
           run: |
             cd kami
@@ -72,6 +76,8 @@ jobs:
           uses: actions/setup-node@v2.1.4
         - name: kami clone
           run: git clone https://github.com/mx-space/admin
+        - name: Install rimraf
+          run: npm install rimraf -g
         - name: admin Install
           run: |
             cd admin
