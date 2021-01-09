@@ -21,7 +21,7 @@ jobs:
             name: Out
             path: ./out
     build-server:
-        name: Build Mix-Space(admin)
+        name: Build Mix-Space(server)
         runs-on: ubuntu-latest
         steps:
         - name: checkout
@@ -45,7 +45,7 @@ jobs:
             name: server
             path: ./server
     build-kami:
-        name: Build Mix-Space(admin)
+        name: Build Mix-Space(kami)
         runs-on: ubuntu-latest
         steps:
         - name: checkout
@@ -64,7 +64,7 @@ jobs:
             sudo  wget http://api.iucky.cn/themes/kami/configs.ts
             cd public
             sudo  rm -rf manifest.json
-            sudo  wget http://api.iucky.cn/themes/kami/public/manifest.json
+            sudo  wget http://api.iucky.cn/themes/kami/manifest.json
             cd ..
             echo "fix user files success"
             sudo yarn build
