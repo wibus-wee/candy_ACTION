@@ -86,7 +86,7 @@ export const configs = {
   description: '一个测试站点',
   keywords: ['blog'],
   menu,
-  url: 'https://iucky.cn',
+  url: 'https://candy.iucky.cn',
   author: 'Wibus',
   social,
   icp: {
