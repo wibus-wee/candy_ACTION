@@ -35,12 +35,12 @@ jobs:
             yarn global add pm2 -g
             yarn global add ts-node -g
             sudo npm install rimraf -g
-            sudo npm install --save-dev cross-env -g
         - name: Server Install
           run: |
             cd server
             cp .env.example .env
-            yarn
+            yarn install --no-bin-links
+            yarn add cross-env --save --no-bin-links
         - name: Server Build
           run: yarn build
         - name: Upload Candy Build Artifact
