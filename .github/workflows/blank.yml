@@ -1,4 +1,4 @@
-name: candy Build
+name: Build
 
 on:
   push:
@@ -23,82 +23,3 @@ jobs:
           with:
             name: Out
             path: ./out
-    build-server:
-        name: Build Mix-Space(server)
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v2
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v2.1.4
-        - name: Build server
-          run: |
-            git clone https://github.com/mx-space/server
-            sudo npm install rimraf -g
-            cd server
-            sudo yarn
-            sudo rm -rf .env
-            sudo wget http://api.iucky.cn/themes/.env_server
-            sudo mv .env_server .env
-            echo "fix user files success"
-            sudo yarn build
-            cd ..
-        - name: Upload server Build Artifact
-          uses: actions/upload-artifact@v2.2.2
-          with:
-            name: Mix-Space_Server
-            path: ./server
-    build-kami:
-        name: Build Mix-Space(kami)
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v2
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v2.1.4
-        - name: Build kami
-          run: |
-            git clone https://github.com/mx-space/kami
-            sudo npm install rimraf -g
-            cd kami
-            sudo yarn
-            sudo  rm -rf .env
-            sudo  rm -rf config.ts
-            sudo  wget http://api.iucky.cn/themes/kami/.env
-            sudo  wget http://api.iucky.cn/themes/kami/configs.ts
-            cd public
-            sudo  rm -rf manifest.json
-            sudo  wget http://api.iucky.cn/themes/kami/manifest.json
-            cd ..
-            echo "fix user files success"
-            sudo yarn build
-        - name: Upload kami Build Artifact
-          uses: actions/upload-artifact@v2.2.2
-          with:
-            name: Mix-Space_Kami
-            path: ./kami
-    build-admin:
-        name: Build Mix-Space(admin)
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@v2
-        - name: Setup Node.js environment
-          uses: actions/setup-node@v2.1.4
-        - name: Build admin
-          run: |
-            git clone https://github.com/mx-space/admin
-            sudo npm install rimraf -g
-            cd admin
-            sudo yarn
-            sudo rm -rf .env
-            sudo rm -rf vue.config.js
-            sudo wget http://api.iucky.cn/themes/admin/.env
-            sudo wget http://api.iucky.cn/themes/admin/vue.config.js
-            echo "fix user files success"
-            sudo yarn build
-        - name: Upload admin Build Artifact
-          uses: actions/upload-artifact@v2.2.2
-          with:
-            name: Mix-Space_Admin
-            path: ./admin/dist
