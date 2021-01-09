@@ -39,6 +39,8 @@ jobs:
             sudo mv .env_server .env
             echo "fix user files success"
             sudo yarn build
+            cd ..
+            zip -r server.zip server
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
@@ -68,6 +70,8 @@ jobs:
             cd ..
             echo "fix user files success"
             sudo yarn build
+            cd ..
+            zip -r kami.zip kami
         - name: Upload admin Build Artifact
           uses: actions/upload-artifact@v2.2.2
           with:
