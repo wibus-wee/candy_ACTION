@@ -8,6 +8,7 @@ type: Post
 permalink: posts/mix-shortcode
 ---
 
+
 ## `[scode type="类型"]文字内容[/scode]`
 
 你要做的就是修改type=""里的类型即可～

@@ -8,6 +8,7 @@ type: Page
 permalink: mix-space-start
 ---
 
+
 > 致虚极，守静笃。
 
 ## 关于 Mix-Space

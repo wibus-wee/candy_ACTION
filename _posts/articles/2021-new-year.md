@@ -8,6 +8,7 @@ type: Post
 permalink: posts/2021-new-year
 ---
 
+
 ## 2020 Prefect Year！
 
 2020.4.25 第一次接触，在本地安装了里程密博客程序，bug一大堆，搞来搞去不会搞，小白一个无人帮

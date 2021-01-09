@@ -8,6 +8,7 @@ type: Post
 permalink: posts/typecho-own-comment
 ---
 
+
 ## 自定义单条评论的HTML代码
 
 在自定义评论前，先设计好单条评论的 HTML 代码结构，如：

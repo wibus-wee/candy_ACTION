@@ -8,6 +8,7 @@ type: Post
 permalink: posts/typecho-plugin-live2D
 ---
 
+
 之前爆胎写了一篇博客添加Live2D 看板娘的文章。为了方便大家，直接做成了一个插件
 
 > 来自爆胎文章

@@ -8,6 +8,7 @@ type: Page
 permalink: about
 ---
 
+
 ## 站点信息
 
 站点名称：秉性之松

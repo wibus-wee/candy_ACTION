@@ -8,6 +8,7 @@ type: Post
 permalink: posts/grade-9-first-volume-Law
 ---
 
+
 ## 第一课	踏上强国之路
 
 本课共有*6个问题*需要背诵

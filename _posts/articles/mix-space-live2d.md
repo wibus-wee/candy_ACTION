@@ -8,6 +8,7 @@ type: Post
 permalink: posts/mix-space-live2d
 ---
 
+
 > Mix-Space第一个添加看板娘教程！
 
 Live2D看板娘来自[爆胎](https://www.itggg.cn)大佬

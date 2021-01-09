@@ -8,6 +8,7 @@ type: Post
 permalink: posts/ads-beautiful-css
 ---
 
+
 没办法，有一些广告位实在是太丑了，于是就自己搞了一个不错的广告位的样式代码，个人觉得还不错的哈哈哈哈
 
 ## HTML

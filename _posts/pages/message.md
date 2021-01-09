@@ -8,6 +8,7 @@ type: Page
 permalink: message
 ---
 
+
 申请友链请前往 https://iucky.cn/friends
 
 ## 介绍一下此站点吧

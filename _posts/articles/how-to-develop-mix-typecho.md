@@ -8,6 +8,7 @@ type: Post
 permalink: posts/how-to-develop-mix-typecho
 ---
 
+
 > Mix 是一款Typecho主题，根据Mix-Space进行仿写，目前基本可以投入使用！
 
 使用文档在此：https://iucky.cn/posts/play/typecho-theme-Mix

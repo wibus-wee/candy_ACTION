@@ -8,6 +8,7 @@ type: Post
 permalink: posts/how-to-learn-grade9
 ---
 
+
 整体总结了下，尽量精简啦
 
 ## 语文

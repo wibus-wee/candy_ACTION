@@ -8,6 +8,7 @@ type: Post
 permalink: posts/typecho-add-pwa
 ---
 
+
 ## 前言
 
 这次踩了好多坑，有很多篇教程都是一样的，但是又刚刚好似乎是不适配handsome主题，总是出错。之后花了一晚上的时间和我的好朋友 **[霂森西 _ 櫻玲桉](https://dlizi.com/)** 在研究，陪着我搞了很长的时间，感谢~

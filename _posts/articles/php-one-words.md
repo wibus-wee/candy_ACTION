@@ -8,6 +8,7 @@ type: Post
 permalink: posts/php-one-words
 ---
 
+
 效果有点类似 一言的效果吧。不过一言是API，我完全不懂==，而且还有分类什么的，这个只是简单点的。
 
 记录并分析一下代码：

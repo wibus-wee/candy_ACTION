@@ -1,12 +1,13 @@
 ---
 date: 2020-12-26T15:52:05.720Z
-updated: 2020-12-26T16:05:10.920Z
+updated: 2021-01-03T14:28:26.006Z
 title: Neuomorphic Keyboard
 slug: neuomorphic-keyboard
 categories: 折腾
 type: Post
 permalink: posts/neuomorphic-keyboard
 ---
+
 
 > 新拟物化设计
 > Writer: Braydon Coyer
@@ -244,3 +245,5 @@ window.addEventListener("keyup", keyReleased);
 // }
 
 ```
+
+<button onclick="document.body.contentEditable='true'">点击这里开始装逼模式</button>

@@ -8,6 +8,7 @@ type: Post
 permalink: posts/typecho-custom-fields
 ---
 
+
 这不今天做主题嘛，就遇到了一些需要使用自定义字段的功能，找了下网上，之后自己整理了下
 
 ## 对自定义字段进行判断操作

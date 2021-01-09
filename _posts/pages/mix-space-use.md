@@ -1,12 +1,13 @@
 ---
 date: 2020-12-06T12:24:14.427Z
-updated: 2020-12-16T14:35:33.103Z
+updated: 2021-01-02T13:40:08.839Z
 title: 使用文档
 slug: mix-space-use
 subtitle: Mix-Space使用文档
 type: Page
 permalink: mix-space-use
 ---
+
 
 部署文档：https://iucky.cn/mix-space-start
 
@@ -86,3 +87,17 @@ pm2 start ecosystem.config.js
 ## 添加Live2D看板娘
 
 教程地址：https://iucky.cn/play/mix-space-live2d
+
+## 前端登录
+
+地址为：域名/login
+
+## 日记页编辑器
+
+> 前提应该是要登录了的
+
+进入一篇日记，双击里面的文字，就会出现一个编辑器啦
+
+就像这个亚子
+
+![](https://gitee.com/wibus/blog-assets-goo/raw/master/asset-pic/QQ20210102-213945@2x.png)

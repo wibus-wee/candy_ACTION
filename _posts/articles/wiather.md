@@ -8,6 +8,7 @@ type: Post
 permalink: posts/wiather
 ---
 
+
 ## 插件信息
 
 插件名称：`Wiather`

@@ -8,6 +8,7 @@ permalink: notes/2
 type: Note
 ---
 
+
 据大家所知：Typecho一般模板都是将大部分代码放入index.php中的，但我，就不哈哈哈
 
 用疯狂用need来嵌入代码，个人认为这样子更新维护的效率更好（对于我来说）就像这个样子

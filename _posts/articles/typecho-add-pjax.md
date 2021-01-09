@@ -8,6 +8,7 @@ type: Post
 permalink: posts/typecho-add-pjax
 ---
 
+
 ## 介绍
 官方介绍：pushState + ajax = pjax 带来最直观的效果是整个网站变成单页应用。这样的效果将会极大的提升用户体验，并且可以减少https的请求的次数和内容。使用github上面的一个开源项目defunkt/jquery-pjax 可以很轻松的帮助我们实现pjax。
 
