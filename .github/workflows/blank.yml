@@ -32,11 +32,14 @@ jobs:
           run: git clone https://github.com/mx-space/server
         - name: Install rimraf
           run: |
+            yarn global add pm2 -g
+            yarn global add ts-node -g
             sudo npm install rimraf -g
             sudo npm install --save-dev cross-env -g
         - name: Server Install
           run: |
             cd server
+            cp .env.example .env
             yarn
         - name: Server Build
           run: yarn build
