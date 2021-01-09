@@ -25,7 +25,7 @@ jobs:
             path: ./out
         - name: tar file
           run: |
-            tar cf Out.tar.gz Out
+            tar cf Out.tar.gz out
         - name: Git Commit and Push
           uses: github-actions-x/commit@v2.6
           with:
