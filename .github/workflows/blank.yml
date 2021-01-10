@@ -19,11 +19,8 @@ jobs:
         - name: Build Out Candy
           run: yarn build
 
-        - name: Deploy GitHub Pages
-          uses: crazy-max/ghaction-github-pages@v2.2.0
-          with: 
-            repo: candy_ACTION
-            build_dir: out
-            committer: wibus-wee
-            author: wibus-wee
-            jekyll: false
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./out
