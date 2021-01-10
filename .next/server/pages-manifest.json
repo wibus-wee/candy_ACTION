@@ -1,0 +1,13 @@
+{
+  "/[slug]": "pages/[slug].js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/api/raw": "pages/api/raw.js",
+  "/": "pages/index.js",
+  "/notes/[id]": "pages/notes/[id].js",
+  "/notes": "pages/notes.js",
+  "/posts/[slug]": "pages/posts/[slug].js",
+  "/posts": "pages/posts.js",
+  "/timeline": "pages/timeline.js"
+}
