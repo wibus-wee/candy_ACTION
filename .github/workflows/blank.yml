@@ -4,7 +4,7 @@ on:
   push:
   schedule:
   # 定时任务
-    - cron: '0 * * * *'
+    - cron: '0 1 * * 6'
 jobs:
     build:
         name: Build candy
@@ -18,9 +18,20 @@ jobs:
           run: yarn
         - name: Build Out Candy
           run: yarn build
-
+        - name: Upload Candy Build Artifact
+          uses: actions/upload-artifact@v2.2.2
+          with:
+            name: Out
+            path: ./out
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./out
+        - name: Git Commit and Push
+          uses: github-actions-x/commit@v2.6
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            commit-message: Build Out
+            email:  1596355173@qq.com
+            name: wibus-wee 
