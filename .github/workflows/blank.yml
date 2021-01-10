@@ -18,34 +18,12 @@ jobs:
           run: yarn
         - name: Build Out Candy
           run: yarn build
-        - name: Upload Candy Build Artifact
-          uses: actions/upload-artifact@v2.2.2
-          with:
-            name: Out
-            path: ./out
-        - name: tar file
-          run: |
-            tar cf Out.tar.gz out
-            sudo rm -rf .next
-            sudo rm -rf out
-            sudo rm -rf node_modules
-        - name: Create a Release
-          uses: actions/create-release@v1.1.4
-          with:
-            tag_name: Release By Bot
-            release_name: Out
-            body: Candy performance
-            owner: wibus-wee
-            repo: Mix-Space-ACTION
-            token: ${{ secrets.GITHUB_TOKEN }}
-        - name: delete tar file
-          run: |
-            sudo rm -rf Out.tar.gz
-        - name: Git Commit and Push
-          uses: github-actions-x/commit@v2.6
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            commit-message: Bot Build
-            email:  1596355173@qq.com
-            name: wibus-wee
-            
+
+        - name: Deploy GitHub Pages
+          uses: crazy-max/ghaction-github-pages@v2.2.0
+          with: 
+            repo: candy_ACTION
+            build_dir: out
+            committer: wibus-wee
+            author: wibus-wee
+            jekyll: false
