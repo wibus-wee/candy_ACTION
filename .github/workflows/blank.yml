@@ -37,6 +37,7 @@ jobs:
             body: Candy performance
             owner: wibus-wee
             repo: Mix-Space-ACTION
+            token: ${{ secrets.GITHUB_TOKEN }}
         - name: delete tar file
           run: |
             sudo rm -rf Out.tar.gz
