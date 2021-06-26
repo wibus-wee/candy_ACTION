@@ -40,7 +40,7 @@
     "markdown-yaml-metadata-parser": "2.1.2",
     "mobx": "5.15.7",
     "mobx-react-lite": "2.2.2",
-    "next": "9.5.3",
+    "next": "9.5.5",
     "next-seo": "4.7.3",
     "normalize.css": "8.0.1",
     "randomcolor": "0.6.2",
@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "7.14.5",
-    "@next/bundle-analyzer": "9.5.3",
+    "@next/bundle-analyzer": "9.5.5",
     "@types/classnames": "2.2.11",
     "@types/inflection": "1.5.28",
     "@types/js-cookie": "2.2.6",
