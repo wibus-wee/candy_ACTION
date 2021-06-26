@@ -19,7 +19,7 @@ jobs:
         - name: Build Out Candy
           run: yarn build
         - name: Upload Candy Build Artifact
-          uses: actions/upload-artifact@v2.2.2
+          uses: actions/upload-artifact@v2.2.4
           with:
             name: Out
             path: ./out
