@@ -5195,10 +5195,10 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.4.tgz#c95415ef451499d7602b91095f3c8e8975f78535"
   integrity sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==
 
-markdown-yaml-metadata-parser@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/markdown-yaml-metadata-parser/-/markdown-yaml-metadata-parser-2.1.2.tgz#d4f1624ddfc4cc35f5f4a98c9b57c43c39eafa62"
-  integrity sha512-bKHHAeuxObLgz1Qylf5dSPqQcpBTbCL5BZuGhAb+ra4NmOjDiMS5Pa1GPqgWkqMdLZTBQ4iweXCQLqrRZN23eg==
+markdown-yaml-metadata-parser@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-yaml-metadata-parser/-/markdown-yaml-metadata-parser-3.0.0.tgz#648ce68850453bfc18aa365879350548edc26e38"
+  integrity sha512-gRxEfuGIpb9pS1nQyASx3+l99e1hyTaK/+zDuvGcZJvr+OlksZ5O+q7opPcQP25j/z7NoOYEp17Lxgq5Sn4vDg==
   dependencies:
     detect-newline "^3.1.0"
     js-yaml "^3.14.1"
